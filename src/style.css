@@ -1,0 +1,221 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@font-face {
+  font-family: 'IRANSansX-Medium';
+  src: url('/fonts/IRANSansX-Medium.woff2') format('woff2'),
+       url('/fonts/IRANSansX-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IRANSansX-Medium', sans-serif;
+  background-color: #f4faff;
+  color: #2c3e50;
+  user-select: none;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.div1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3a5f7d;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.div1 > div {
+  font-size: 14px;
+  flex: 1 1 auto; 
+  text-align: center;   
+  min-width: 100px;      
+}
+
+#min-temp,
+#max-temp,
+#pressure-weather,
+#humidity,
+#wind-speed {
+  font-size: 14px;
+}
+
+.div2 {
+  grid-row: span 5 / span 5;
+  grid-column-start: 3;
+  background-color: #d6ecfa; 
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center; 
+  gap: 10px;                
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+div {
+  padding: 10px;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #cce7f5;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #cce7f5; /* می‌تونی همون رنگ اولیه بذاری */
+  box-shadow: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #a3d5f7;
+  border: none;
+  border-radius: 8px;
+  color: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8ccbe9;
+}
+
+span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3a5f7d;
+}
+
+.topdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.topdiv #reload,
+.topdiv #theme-toggle {
+  margin-right: -25px;
+}
+
+.topdiv .button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+body.dark-mode {
+  background-color: #1d1d1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .parent {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .div1 {
+  background-color: #202020;
+  color: #e0e0e0;
+}
+
+body.dark-mode .div2 {
+  background-color: #202020;
+  color: #e0e0e0;
+}
+
+body.dark-mode input[type="text"] {
+  background-color: #202020;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+body.dark-mode button {
+  background-color: #6e8ea4;
+  color: #e0e0e0;
+}
+
+body.dark-mode button:hover {
+  background-color: #6e8ea4;
+}
+
+h1, h2, p, input, button {
+  font-family: 'IRANSansX-Medium', sans-serif;
+}
+
+#info-btn button {
+  background-color: #a3d5f7;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+body.dark-mode #info-btn button {
+  background-color: #6e8ea4; 
+  color: #f0f8ff; 
+}
+
+#info-btn button:hover {
+  background-color: #8ccbe9;
+}
+
+
+#info-modal {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 245px;
+  background-color: #333333;
+  border: 1px solid #ccc;
+  color: #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-size: 14px;
+  z-index: 100;
+}
+
+#info-modal.show {
+  display: block;
+}

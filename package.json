@@ -1,0 +1,45 @@
+{
+  "name": "weather-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12",
+    "vite": "^7.1.2",
+    "wait-on": "^8.0.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "concurrently": "^9.2.1"
+  },
+  "build": {
+  "appId": "com.aria.weatherapp",
+  "productName": "WeatherApp",
+  "files": [
+    "dist/**/*",
+    "main.js",
+    "package.json",
+    "public/icon.ico"
+  ],
+  "directories": {
+    "buildResources": "public"
+  },
+  "win": {
+    "icon": "public/weather-app.ico",
+    "target": [
+      "nsis",
+      "portable"
+      ]
+    }
+  }
+
+}
