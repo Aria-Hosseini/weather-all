@@ -92,13 +92,6 @@ project-root/
 
 MIT License – feel free to use and modify!
 
----
-
-💡 **Tip:** To add GIF or screenshots:
-
-* Take a small 800×600 recording or screenshot of your app
-* Place them in `public/`
-* Update the markdown links in README
-
----
+good luck developers ;)
+with love Aria;
 
