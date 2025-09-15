@@ -2,7 +2,7 @@
 
 A **modern desktop weather app** built with **Electron** and **Vite**, featuring **dark mode, digital clock, city-based weather info, and custom window/executable icon**.
 
-![Weather App Screenshot](./public/screenshot.png)
+![Weather App Screenshot](./public/screenshot.jpg)
 *Example screenshot of the app in light mode.*
 
 ---
